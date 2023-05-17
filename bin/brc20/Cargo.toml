@@ -1,0 +1,25 @@
+[package]
+name = "brc20"
+version = "0.1.0"
+edition = "2021"
+description = "BRC20 client"
+license = "MIT"
+
+[[bin]]
+name = "brc20"
+path = "src/main.rs"
+
+[dependencies]
+dotenvy = {workspace = true}
+thiserror = { workspace=true }
+tokio = { workspace = true }
+anyhow = {workspace = true}
+async-trait = { workspace = true}
+reqwest = { workspace = true , features = ["json"]}
+serde = { workspace = true}
+serde_json = { workspace = true}
+lazy_static = { workspace = true }
+async-shutdown = {workspace = true}
+bitcoin = "0.30.0"
+bitcoincore-rpc = "0.17.0"
+paris = { version = "1.5.15", features = ["timestamps", "macros"]}
